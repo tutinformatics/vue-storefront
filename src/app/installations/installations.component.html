@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="grid-item" *ngFor="let installation of installations"> 
+        <h4 class="header">{{ installation.productName }}</h4>
+        <div>
+            <p>{{ installation.description }}</p>
+        </div>
+        <input class="item-d" type="submit" value="Installi">
+    </div>
+</div>

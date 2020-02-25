@@ -4,15 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HttpClientModule }    from '@angular/common/http';
+import { InstallationsComponent } from './installations/installations.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InstallationsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, InstallationsComponent]
 })
 export class AppModule { }
