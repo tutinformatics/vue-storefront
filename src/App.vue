@@ -13,7 +13,7 @@
 <script>
 import HeaderComponent from "./components/HeaderComponent.vue";
 import Sidebar from "./components/Sidebar";
-import ShopItems from './components/ShopItems';
+import ShopItems from "./components/ShopItems";
 
 export default {
   name: "App",

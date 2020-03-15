@@ -36,17 +36,15 @@
         </div>
       </template>
     </SfHeader>
-    <StoriesPlaceholder :mobile="isMobile" />
   </div>
 </template>
 <script>
 import { SfHeader } from "@storefront-ui/vue";
-import { StoriesPlaceholder, SfSearchBar } from "@storefront-ui/vue";
+import { SfSearchBar } from "@storefront-ui/vue";
 import CreateButton from "./buttons/CreateButton.vue"
 export default {
   components: {
     SfHeader,
-    StoriesPlaceholder,
     SfSearchBar,
     CreateButton
   },

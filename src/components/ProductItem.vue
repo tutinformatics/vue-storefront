@@ -22,12 +22,12 @@
     @click:is-added-to-cart="alert('@click:is-added-to-cart')"
     @click:wishlist="alert('@click:wishlist')"
     @click:reviews="alert('@click:reviews')"
-  ></SfProductCard>
+  />
 </template>
 <script>
 import { SfProductCard } from "@storefront-ui/vue";
 export default {
-  name: "Item",
+  name: 'ProductItem',
   components: {
     SfProductCard
   },
