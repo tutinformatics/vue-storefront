@@ -1,6 +1,6 @@
 <template>
   <SfList :style="{ maxWidth: '186px', padding: '1rem' }">
-    <SfListItem v-for="item in items" :key="item.label" :style="{ margin: '10px 0' }">
+    <SfListItem v-for="item in items" :key="item.label" :style="{ margin: '30px 0' }">
       <SfMenuItem :label="item.label" />
     </SfListItem>
   </SfList>
@@ -17,13 +17,11 @@ export default {
   data() {
     return {
       items: [
-        { label: "All" },
-        { label: "Skirts" },
-        { label: "Dresses" },
-        { label: "Belts" },
-        { label: "Bag" },
-        { label: "Trainers" },
-        { label: "Sandals" }
+        { label: "Lemmikud" },
+        { label: "Pakkumised" },
+        { label: "Tellimused" },
+        { label: "Arved" },
+        { label: "Logi välja" }
       ]
     };
   }

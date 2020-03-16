@@ -25,8 +25,8 @@ export default {
   data() {
     return {
       isSidebarOpen: true,
-      title: "CHANGE THIS",
-      subtitle: "Maybe name?",
+      title: "Ofbiz",
+      subtitle: "teenused",
       headingLevel: 1,
       overlay: false,
       button: false

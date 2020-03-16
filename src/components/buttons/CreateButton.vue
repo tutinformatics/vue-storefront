@@ -1,19 +1,22 @@
 <template>
-  <SfButton :class="customClass" :disabled="disabled">
-    Create
-  </SfButton>
+        <SfButton :class="customClass" :disabled="disabled">
+            Loo
+        </SfButton>
 </template>
 <script>
-import { SfButton } from "@storefront-ui/vue";
-export default {
-  components: {
-    SfButton
-  },
-  data() {
-    return {
-      default: "Shop now",
-      disabled: false
+    import {SfButton} from "@storefront-ui/vue";
+
+    export default {
+        name: "button-style",
+        components: {
+            SfButton
+        },
+        data() {
+            return {
+                default: "Shop now",
+                disabled: false
+            };
+        }
     };
-  }
-};
 </script>
+

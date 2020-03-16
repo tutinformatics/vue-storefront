@@ -34,27 +34,26 @@ export default {
   data() {
     return {
       image: {
-        mobile: { url: "/assets/storybook/Home/productB.jpg" },
-        desktop: { url: "/assets/storybook/Home/productB.jpg" }
+        mobile: { url: "/assets/logo.jpg" },
+        desktop: { url: "/assets/logo.jpg" }
       },
-      imageWidth: 216,
-      imageHeight: 326,
-      badgeLabel: "-50%",
+      imageWidth: 100,
+      imageHeight: 130,
       badgeColor: "color-primary",
-      title: "Cotton Sweater",
+      title: "Teenus",
       link: "",
       linkTag: "",
-      scoreRating: 4,
-      maxRating: 5,
-      reviewsCount: 7,
-      regularPrice: "$10,99",
-      specialPrice: "$5,09",
+      //scoreRating: 4,
+      //maxRating: 5,
+     //reviewsCount: 7,
+      regularPrice: "10,99€",
+      specialPrice: "5,09€",
       wishlistIcon: "heart",
       isOnWishlistIcon: "heart_fill",
       isOnWishlist: false,
-      showAddToCartButton: false,
+      //showAddToCartButton: false,
       isAddedToCart: false,
-      addToCartDisabled: false
+      addToCartDisabled: false,
     };
   }
 };

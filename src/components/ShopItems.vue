@@ -1,13 +1,13 @@
 <template>
   <div>
-    <p>
-      H
-      Kuidagi peab siia lisama itemeid
-      vt seda: https://storybook.storefrontui.io/?path=/story/organisms-productcard--common
-    </p>
+    <h><b>Leia endale sobiv lahendus</b></h>
+
+    <!-- See tuleks teha alammenüüks (hetkel lihtsalt tekstina ja joon all) -->
+    <p>Kõik Arendus Raamistikud Andmebaasid</p>
+
     <!-- for loop here -->
     <b-container>
-      <b-row cols="4">
+      <b-row cols="3">
         <b-col>
           <ProductItem />
         </b-col>
