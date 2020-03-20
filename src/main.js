@@ -1,22 +1,17 @@
-// regenerator-runtime is to support async/await syntax in ESNext.
-// If you don't use async/await, you can remove regenerator-runtime.
-import 'regenerator-runtime/runtime';
-import * as environment from '../config/environment.json';
-import {PLATFORM} from 'aurelia-pal';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.css';
-import 'whatwg-fetch';
+import Vue from 'vue'
+import App from './App.vue'
+import "@storefront-ui/vue/styles.scss"
 
-export function configure(aurelia) {
-  aurelia.use
-    .standardConfiguration()
-    .feature(PLATFORM.moduleName('resources/index'));
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
-  aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-  if (environment.testing) {
-    aurelia.use.plugin(PLATFORM.moduleName('aurelia-testing'));
-  }
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
 
-  aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('app')));
-}
+Vue.config.productionTip = false
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
