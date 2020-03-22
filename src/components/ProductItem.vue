@@ -5,7 +5,7 @@
     :image-height="imageHeight"
     :badge-label="badgeLabel"
     :badge-color="badgeColor"
-    :title="title"
+    :title="product.productId"
     :link="link"
     :link-tag="linkTag"
     :score-rating="scoreRating"
@@ -55,6 +55,9 @@ export default {
       isAddedToCart: false,
       addToCartDisabled: false,
     };
+  },
+  props: {
+    product: Object
   }
 };
 </script>
