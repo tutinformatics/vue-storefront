@@ -29,7 +29,7 @@
             }
         },
         created() {
-            fetch("http://161.35.21.253/api/products")
+            fetch("/api/products")
                 .then((response) =>   response.json().then((json) => this.products = json))
         }
     };
