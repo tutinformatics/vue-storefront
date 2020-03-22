@@ -8,8 +8,29 @@
     <!-- for loop here -->
     <b-container>
       <b-row cols="3">
-        <b-col v-for="product in products" :key="product.productId">
-          <ProductItem :product="product"/>
+        <b-col>
+          <ProductItem />
+        </b-col>
+        <b-col>
+          <ProductItem />
+        </b-col>
+        <b-col>
+          <ProductItem />
+        </b-col>
+        <b-col>
+          <ProductItem />
+        </b-col>
+                <b-col>
+          <ProductItem />
+        </b-col>
+        <b-col>
+          <ProductItem />
+        </b-col>
+        <b-col>
+          <ProductItem />
+        </b-col>
+        <b-col>
+          <ProductItem />
         </b-col>
       </b-row>
     </b-container>
@@ -21,9 +42,6 @@ export default {
   name: "ShopItems",
   components: {
     ProductItem
-  },
-  props: {
-    products: Array,
   }
 };
 </script>

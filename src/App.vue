@@ -5,7 +5,7 @@
         </header>
         <div>
             <Sidebar/>
-            <ShopItems :products="products"/>
+            <ShopItems/>
         </div>
     </div>
 </template>
@@ -22,15 +22,6 @@
             HeaderComponent,
             Sidebar,
             ShopItems
-        },
-        data() {
-            return {
-                products: []
-            }
-        },
-        created() {
-            fetch("/api/products")
-                .then((response) =>   response.json().then((json) => this.products = json))
         }
     };
 </script>
