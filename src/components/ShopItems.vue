@@ -31,7 +31,7 @@ export default {
   }, 
   mounted() {
     axios
-      .get('http://161.35.21.253/api/product/type/DIGITAL_GOOD')
+      .get('https://161.35.21.253/api/product/type/DIGITAL_GOOD')
       .then(response => (this.itemData = response))
   }
 };
