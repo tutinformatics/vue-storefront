@@ -5,7 +5,7 @@
         </header>
         <div class="container">
             <Sidebar/>
-            <ShopItems/>
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -13,15 +13,13 @@
 <script>
     import HeaderComponent from "./components/HeaderComponent.vue";
     import Sidebar from "./components/Sidebar";
-    import ShopItems from "./components/ShopItems";
 
 
     export default {
         name: "App",
         components: {
             HeaderComponent,
-            Sidebar,
-            ShopItems
+            Sidebar
         }
     };
 </script>
