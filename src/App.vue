@@ -14,7 +14,6 @@
     import HeaderComponent from "./components/HeaderComponent.vue";
     import Sidebar from "./components/Sidebar";
 
-
     export default {
         name: "App",
         components: {
