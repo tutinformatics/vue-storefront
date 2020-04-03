@@ -3,9 +3,9 @@
         <header>
             <HeaderComponent/>
         </header>
-        <div>
+        <div class="container">
             <Sidebar/>
-            <ShopItems/>
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -13,15 +13,13 @@
 <script>
     import HeaderComponent from "./components/HeaderComponent.vue";
     import Sidebar from "./components/Sidebar";
-    import ShopItems from "./components/ShopItems";
 
 
     export default {
         name: "App",
         components: {
             HeaderComponent,
-            Sidebar,
-            ShopItems
+            Sidebar
         }
     };
 </script>
@@ -66,7 +64,8 @@
         width: 17%;
     }
     .sf-product-card {
-        margin-left: 100px;
+        margin-left: 50px;
+        --product-card-min-width: 40px;
     }
 
     .sf-heading__title {

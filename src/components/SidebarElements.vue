@@ -1,7 +1,8 @@
 <template>
   <SfList :style="{ maxWidth: '186px', padding: '1rem' }">
     <SfListItem v-for="item in items" :key="item.label" :style="{ margin: '30px 0' }">
-      <SfMenuItem :label="item.label" />
+      <router-link :to="item.to"><SfMenuItem :label="item.label" /></router-link>
+
     </SfListItem>
   </SfList>
 </template>
@@ -17,9 +18,9 @@ export default {
   data() {
     return {
       items: [
-        { label: "Lemmikud" },
-        { label: "Pakkumised" },
-        { label: "Tellimused" },
+        { label: "Lemmikud"},
+        { label: "Pakkumised", to: "/" },
+        { label: "Tellimused", to: "/orders" },
         { label: "Arved" },
         { label: "Logi välja" }
       ]

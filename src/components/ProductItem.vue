@@ -1,59 +1,61 @@
 <template>
-  <SfProductCard
-    :image="image"
-    :image-width="imageWidth"
-    :image-height="imageHeight"
-    :badge-label="badgeLabel"
-    :badge-color="badgeColor"
-    :title="title"
-    :link="link"
-    :link-tag="linkTag"
-    :score-rating="scoreRating"
-    :max-rating="maxRating"
-    :reviews-count="reviewsCount"
-    :regular-price="regularPrice"
-    :special-price="specialPrice"
-    :wishlist-icon="wishlistIcon"
-    :is-on-wishlist-icon="isOnWishlistIcon"
-    :is-on-wishlist="isOnWishlist"
-    :show-add-to-cart-button="showAddToCartButton"
-    :add-to-cart-disabled="addToCartDisabled"
-    :is-added-to-cart="isAddedToCart"
-    @click:is-added-to-cart="alert('@click:is-added-to-cart')"
-    @click:wishlist="alert('@click:wishlist')"
-    @click:reviews="alert('@click:reviews')"
-  />
+  <section>
+    <SfProductCard style="height: 300px"
+      :image="image"
+      :image-width="imageWidth"
+      :image-height="imageHeight"
+      :badge-label="badgeLabel"
+      :badge-color="badgeColor"
+      :title="item.productName"
+      :link="link"
+      :link-tag="linkTag"
+      :score-rating="scoreRating"
+      :max-rating="maxRating"
+      :reviews-count="reviewsCount"
+      :wishlist-icon="wishlistIcon"
+      :is-on-wishlist-icon="isOnWishlistIcon"
+      :is-on-wishlist="isOnWishlist"
+      :show-add-to-cart-button="showAddToCartButton"
+      :add-to-cart-disabled="addToCartDisabled"
+      :is-added-to-cart="isAddedToCart"
+      @click:is-added-to-cart="alert('@click:is-added-to-cart')"
+      @click:wishlist="alert('@click:wishlist')"
+      @click:reviews="alert('@click:reviews')"
+    />
+    <div class="float-right">
+      <SfButton>Telli</SfButton>
+    </div>
+  </section>
 </template>
 <script>
-import { SfProductCard } from "@storefront-ui/vue";
+import { SfProductCard, SfButton } from "@storefront-ui/vue";
+
 export default {
-  name: 'ProductItem',
+  name: "ProductItem",
   components: {
-    SfProductCard
+    SfProductCard,
+    SfButton
+  },
+  props: {
+    item: Object
   },
   data() {
     return {
       image: {
-        mobile: { url: "/assets/logo.jpg" },
-        desktop: { url: "/assets/logo.jpg" }
+        mobile: { url: "./src/assets/ok.png" },
+        desktop: { url: "./src/assets/ok.png" }
       },
       imageWidth: 100,
       imageHeight: 130,
       badgeColor: "color-primary",
-      title: "Teenus",
       link: "",
       linkTag: "",
-      //scoreRating: 4,
-      //maxRating: 5,
-     //reviewsCount: 7,
-      regularPrice: "10,99€",
-      specialPrice: "5,09€",
       wishlistIcon: "heart",
       isOnWishlistIcon: "heart_fill",
       isOnWishlist: false,
-      //showAddToCartButton: false,
       isAddedToCart: false,
       addToCartDisabled: false,
+      showAddToCartButton: false
     };
   }
 };
