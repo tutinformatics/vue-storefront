@@ -1,14 +1,9 @@
 <template>
     <SfSection :title-heading="order.orderId" :subtitle:heading="order.orderName">
-    <b-list-group class="list-group list-group-flush text-left">
-        <b-list-group-item>Order ID: {{order.orderId}}</b-list-group-item>
-        <b-list-group-item>Order name: {{order.orderName}}</b-list-group-item>
-        <b-list-group-item>Created: {{new Date(order.createdStamp)}}</b-list-group-item>
-        <b-list-group-item>Last update: {{new Date(order.lastUpdatedStamp)}}</b-list-group-item>
-    </b-list-group> 
-    <section class="float-right mt-2">
-        <router-link :to="'/orders/' + order.orderId + '/edit'"><SfButton>Muuda</SfButton></router-link>
-    </section>
+    <ul>
+        <li>{{order}}</li>
+    </ul>
+    <router-link :to="'/orders/' + order.orderId + '/edit'"><SfButton>Muuda</SfButton></router-link>
     </SfSection>
 </template>
 
