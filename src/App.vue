@@ -102,4 +102,14 @@
         text-align: center;
     }
 
+    .sf-section__content {
+        margin-left: 90px;
+    }
+
+
+    .sf-input__wrapper {
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+
 </style>
