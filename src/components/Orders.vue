@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <SfTable :class="customClass">
+        <SfTable>
             <h1>Orders</h1>
             <SfTableHeading>
                 <SfTableHeader v-for="header in tableHeaders" :key="header">{{
@@ -14,14 +14,12 @@
                     }}</SfTableData>
             </SfTableRow>
         </SfTable>
-        Could add orders from <br>
-        <a href="https://flowerstore.ee/api/order/DEMO_CUSTOMER">https://flowerstore.ee/api/order/DEMO_CUSTOMER</a> <br>
-        Maybe with button to edit order?
     </div>
 </template>
 
 <script>
     import { SfTable } from "@storefront-ui/vue";
+    import axios from "axios";
     export default {
         name: "Orders",
         components: {
@@ -30,14 +28,31 @@
         data() {
             return {
                 tableHeaders: [
+                    "Id",
                     "Order Name",
                     "Creation Date",
                     "Priority"
                 ],
-                tableRows: [
-                    ["Ofbiz", "2020-03-30 10:00", 3],
-                    ["Aurelia", "2020-03-30 12:00", 4]
-                ]
+                tableRows: []
+            }
+        },
+        mounted() {
+            axios
+                .get('https://flowerstore.ee/api/order/DEMO_CUSTOMER')
+                .then(response => (this.updateData(response["data"])))
+        },
+        methods: {
+            updateData(jsonRows) {
+                var rows = [];
+                for (let i = 0; i < jsonRows.length; i++) {
+                    rows.push([
+                        jsonRows[i]["orderId"],
+                        jsonRows[i]["orderName"],
+                        jsonRows[i]["createdStamp"],
+                        jsonRows[i]["priority"]
+                    ])
+                }
+                this.tableRows = rows;
             }
         }
     }

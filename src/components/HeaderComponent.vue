@@ -8,7 +8,6 @@
       :wishlist-icon="wishlistIcon"
       :is-sticky="isSticky"
       :account-icon="accountIcon"
-      :style="spacer"
       :cart-items-qty="cartItemsQty"
       @click:cart="alert('@click:cart')"
       @click:wishlist="alert('@click:wishlist')"
@@ -23,12 +22,7 @@
         <div
           :style="{margin: '0 0 0 1.25rem', display: 'flex', alignItems:'center', height: '100%'}"
         >
-          <SfSearchBar
-            :class="customClass"
-            :placeholder="placeholder"
-            :aria-label="ariaLabel"
-            v-model="value"
-          >
+          <SfSearchBar>
             <template #clear-icon>
               <span class="sf-search-bar__clear-icon">🧹</span>
             </template>

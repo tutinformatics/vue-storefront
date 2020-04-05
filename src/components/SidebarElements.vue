@@ -18,11 +18,8 @@ export default {
   data() {
     return {
       items: [
-        { label: "Lemmikud"},
         { label: "Pakkumised", to: "/" },
-        { label: "Tellimused", to: "/orders" },
-        { label: "Arved" },
-        { label: "Logi välja" }
+        { label: "Tellimused", to: "/orders" }
       ]
     };
   }

@@ -1,5 +1,5 @@
 <template>
-        <SfButton :class="customClass" :disabled="disabled">
+        <SfButton :disabled="disabled">
             Loo
         </SfButton>
 </template>
