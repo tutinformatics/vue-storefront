@@ -26,7 +26,7 @@ export default {
     return {
       isSidebarOpen: true,
       title: "Ofbiz",
-      subtitle: "teenused",
+      subtitle: "services",
       headingLevel: 1,
       overlay: false,
       button: false

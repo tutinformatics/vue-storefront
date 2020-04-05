@@ -1,9 +1,9 @@
 <template>
   <b-container>
-    <h1><b>Leia endale sobiv lahendus</b></h1>
+    <h1><b>Find a perfect solution for yourself</b></h1>
 
     <!-- See tuleks teha alammenüüks (hetkel lihtsalt tekstina ja joon all) -->
-    <p>Kõik Arendus Raamistikud Andmebaasid</p>
+    <p>All Development Frameworks Databases</p>
 
     <b-container>
       <b-row cols="3">

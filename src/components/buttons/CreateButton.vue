@@ -1,6 +1,6 @@
 <template>
         <SfButton :disabled="disabled">
-            Loo
+            Create
         </SfButton>
 </template>
 <script>

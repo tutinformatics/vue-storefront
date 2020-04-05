@@ -18,8 +18,8 @@ export default {
   data() {
     return {
       items: [
-        { label: "Pakkumised", to: "/" },
-        { label: "Tellimused", to: "/orders" }
+        { label: "Offers", to: "/" },
+        { label: "Orders", to: "/orders" }
       ]
     };
   }

@@ -90,5 +90,16 @@
         font-size: 25px;
     }
 
+    .sf-table__header {
+        margin-left: 90px;
+    }
+
+    .sf-table__row {
+        margin-left: 100px;
+    }
+
+    .sf-table__data {
+        text-align: center;
+    }
 
 </style>
