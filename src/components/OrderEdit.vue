@@ -25,8 +25,8 @@
                 order: {},
                 fields: [
                     {name: "orderName", label: "Order Name", type: "text"},
-                    {name: "priority", label: "Priority", type: "number"},
-                    {name: "orderDate", label: "Order Date", type: "date"}]
+                    {name: "priority", label: "Priority", type: "number"}
+                    ]
             }
         },
         mounted() {
@@ -43,12 +43,20 @@
                         'Access-Control-Allow-Origin': '*',
                         'Content-Type': 'application/json'
                     },
-                    data: this.order
+                    data: this.getSubmitData()
                 })
                 /*axios.put( 'https://flowerstore.ee/api/order/id/' + this.order.orderId,
                     { data: this.order },
                     { headers: { "Access-Control-Allow-Origin": "*", } } )
                     .then(resp => (this.info = resp));*/
+            },
+            getSubmitData() {
+                var result = {};
+                for (var i = 0; i < this.fields.length; i++) {
+                    var name = this.fields[i]["name"];
+                    result[name] = this.order[name];
+                }
+                return result;
             }
         }
     }
