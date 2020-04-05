@@ -7,7 +7,7 @@
                  :label="field.label"
                  :name="field.name"
         ></SfInput>
-        <SfButton>Submit</SfButton>
+        <SfButton v-on:click="submit()">Submit</SfButton>
     </div>
 </template>
 
@@ -33,6 +33,23 @@
             axios
                 .get('https://flowerstore.ee/api/order/id/' + this.$route.params.id)
                 .then(response => (this.order = (response["data"])))
+        },
+        methods: {
+            submit() {
+                axios({
+                    method: 'put',
+                    url: 'https://flowerstore.ee/api/order/id/' + this.order.orderId,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Content-Type': 'application/json'
+                    },
+                    data: this.order
+                })
+                /*axios.put( 'https://flowerstore.ee/api/order/id/' + this.order.orderId,
+                    { data: this.order },
+                    { headers: { "Access-Control-Allow-Origin": "*", } } )
+                    .then(resp => (this.info = resp));*/
+            }
         }
     }
 </script>
