@@ -9,7 +9,8 @@
                     }}</SfTableHeader>
             </SfTableHeading>
             <SfTableRow v-for="(row, key) in tableRows" :key="key">
-                <SfTableData v-for="data in row" :key="data">{{
+                <SfTableData><router-link :to="'orders/' + row[0]">{{row[0]}}</router-link></SfTableData>
+                <SfTableData v-for="data in row.slice(1)" :key="data">{{
                     data
                     }}</SfTableData>
             </SfTableRow>

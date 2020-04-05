@@ -5,7 +5,6 @@
     <!-- See tuleks teha alammenüüks (hetkel lihtsalt tekstina ja joon all) -->
     <p>Kõik Arendus Raamistikud Andmebaasid</p>
 
-    <!-- for loop here -->
     <b-container>
       <b-row cols="3">
         <b-col v-for="(item, index) in itemData.data" :key="index">
