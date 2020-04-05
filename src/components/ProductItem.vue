@@ -19,12 +19,13 @@
       @click:reviews="alert('@click:reviews')"
     />
     <div class="float-right">
-      <SfButton>Telli</SfButton>
+      <SfButton v-on:click="addOrder()">Telli</SfButton>
     </div>
   </section>
 </template>
 <script>
 import { SfProductCard, SfButton } from "@storefront-ui/vue";
+import axios from "axios";
 
 export default {
   name: "ProductItem",
@@ -53,6 +54,19 @@ export default {
       addToCartDisabled: false,
       showAddToCartButton: false
     };
+  },
+  methods: {
+    addOrder() {
+      axios({
+        method: 'post',
+        url: 'https://flowerstore.ee/api/order/DEMO_CUSTOMER',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        },
+        data: {orderName: this.item.productName}
+      })
+    }
   }
 };
 </script>
