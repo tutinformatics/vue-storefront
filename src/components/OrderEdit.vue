@@ -45,10 +45,6 @@
                     },
                     data: this.getSubmitData()
                 })
-                /*axios.put( 'https://flowerstore.ee/api/order/id/' + this.order.orderId,
-                    { data: this.order },
-                    { headers: { "Access-Control-Allow-Origin": "*", } } )
-                    .then(resp => (this.info = resp));*/
             },
             getSubmitData() {
                 var result = {};
