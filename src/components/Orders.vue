@@ -39,7 +39,7 @@
         },
         mounted() {
             axios
-                .get('https://flowerstore.ee/api/order/DEMO_CUSTOMER')
+                .get('/api/order/DEMO_CUSTOMER')
                 .then(response => (this.updateData(response["data"])))
         },
         methods: {

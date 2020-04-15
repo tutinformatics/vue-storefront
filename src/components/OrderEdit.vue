@@ -31,14 +31,14 @@
         },
         mounted() {
             axios
-                .get('https://flowerstore.ee/api/order/id/' + this.$route.params.id)
+                .get('/api/order/id/' + this.$route.params.id)
                 .then(response => (this.order = (response["data"])))
         },
         methods: {
             submit() {
                 axios({
                     method: 'put',
-                    url: 'https://flowerstore.ee/api/order/id/' + this.order.orderId,
+                    url: '/api/order/id/' + this.order.orderId,
                     headers: {
                         'Access-Control-Allow-Origin': '*',
                         'Content-Type': 'application/json'

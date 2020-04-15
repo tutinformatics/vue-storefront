@@ -29,7 +29,7 @@
         },
         mounted() {
             axios
-                .get('https://flowerstore.ee/api/order/id/' + this.$route.params.id)
+                .get('/api/order/id/' + this.$route.params.id)
                 .then(response => (this.order = (response["data"])))
         }
     }

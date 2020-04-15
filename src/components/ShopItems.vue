@@ -30,7 +30,7 @@ export default {
   }, 
   mounted() {
     axios
-      .get('https://flowerstore.ee/api/product/type/DIGITAL_GOOD')
+      .get('/api/product/type/DIGITAL_GOOD')
       .then(response => (this.itemData = response))
   }
 };

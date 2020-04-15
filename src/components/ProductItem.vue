@@ -59,7 +59,7 @@ export default {
     addOrder() {
       axios({
         method: 'post',
-        url: 'https://flowerstore.ee/api/order/DEMO_CUSTOMER',
+        url: '/api/order/DEMO_CUSTOMER',
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json'
