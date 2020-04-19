@@ -112,4 +112,8 @@
         margin-left: 150px;
     }
 
+    .sf-breadcrumbs {
+        margin-left: 100px;
+    }
+
 </style>
