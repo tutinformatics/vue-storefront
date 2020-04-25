@@ -39,11 +39,11 @@ export default {
   data() {
     return {
       image: {
-        mobile: { url: "./src/assets/ok.png" },
-        desktop: { url: "./src/assets/ok.png" }
+        mobile: { url: "https://www.meme-arsenal.com/memes/69b5e3c95bd05fe729c7977b6807f017.jpg" },
+        desktop: { url: "https://www.meme-arsenal.com/memes/69b5e3c95bd05fe729c7977b6807f017.jpg" }
       },
-      imageWidth: 100,
-      imageHeight: 130,
+      imageWidth: 216,
+      imageHeight: 326,
       badgeColor: "color-primary",
       link: "",
       linkTag: "",
