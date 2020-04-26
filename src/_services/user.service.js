@@ -12,15 +12,31 @@ class UserService {
         return axios.get(API_URL + 'user', { headers: authHeader() });
     }
 
-    getUserLogin(user) {
-        return axios.get("/api/generic/v1/entities/UserLogin?userLoginId=" + user.userLoginId, { headers: authHeader() })
-            .then(response => {
-                if (response.data.length > 0) {
-                    localStorage.setItem('userlogin', JSON.stringify(response.data[0]));
-                }
+    saveUserLogin() {
+        let user = JSON.parse(localStorage.getItem('user'));
 
-                return response.data;
-            });
+        if (user && user.userLoginId) {
+            return axios.get("/api/generic/v1/entities/UserLogin?userLoginId=" + user.userLoginId, { headers: authHeader() })
+                .then(response => {
+                    if (response.data.length > 0) {
+                        localStorage.setItem('userlogin', JSON.stringify(response.data[0]));
+                    }
+
+                    return response.data;
+                });
+        } else {
+            return {};
+        }
+    }
+
+    getUserLogin() {
+        let userlogin = JSON.parse(localStorage.getItem('userlogin'));
+
+        if (userlogin) {
+            return userlogin
+        } else {
+            return {};
+        }
     }
 }
 

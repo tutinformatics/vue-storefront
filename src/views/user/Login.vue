@@ -54,6 +54,7 @@
 
 <script>
     import User from '../../_models/user';
+    import UserService from "../../_services/user.service";
 
     export default {
         name: 'Login',
@@ -87,6 +88,7 @@
                         this.$store.dispatch('auth/login', this.user).then(
                             () => {
                                 this.$router.push('/profile');
+                                UserService.saveUserLogin();
                             },
                             error => {
                                 this.loading = false;
