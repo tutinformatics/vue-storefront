@@ -11,7 +11,7 @@
       :cart-items-qty="cartItemsQty"
       @click:cart="alert('@click:cart')"
       @click:wishlist="alert('@click:wishlist')"
-      @click:account="alert('@click:account')"
+      @click:account="goToProfile"
     >
       <template #search>
         <div :style="{margin: '0 0 0 auto'}">
@@ -55,6 +55,14 @@ export default {
       accountIcon: "profile",
       cartItemsQty: "0"
     };
+  },
+  methods: {
+    alert(msg) {
+      alert(msg);
+    },
+    goToProfile() {
+      this.$router.push("/profile");
+    }
   }
 };
 </script>
