@@ -5,9 +5,9 @@ const API_URL = '/api/generic/v1/';
 
 class ProductService {
 
-  getProductList() {
-    return axios.get(API_URL + 'entities/Product?productTypeId=DIGITAL_GOOD', { headers: authHeader() });
-  }
+    getProductList() {
+        return axios.get(API_URL + 'entities/Product?productTypeId=DIGITAL_GOOD', { headers: authHeader() });
+    }
 }
 
 export default new ProductService();
