@@ -6,7 +6,7 @@
 
         <b-container>
             <b-row cols="3">
-                <b-col v-for="(item, index) in itemData.data" :key="index">
+                <b-col v-for="(item, index) in itemData" :key="index">
                     <ProductItem :item="item"/>
                 </b-col>
             </b-row>
@@ -14,12 +14,12 @@
     </b-container>
 </template>
 <script>
-    import ProductItem from "./ProductItem";
-    import axios from 'axios';
+    import ProductItem from "../../components/ProductItem";
     import {SfBreadcrumbs} from "@storefront-ui/vue";
+    import ProductService from "../../_services/product.service";
 
     export default {
-        name: "ShopItems",
+        name: "ProductList",
         components: {
             ProductItem,
             SfBreadcrumbs
@@ -35,9 +35,8 @@
             }
         },
         mounted() {
-            axios
-                .get('/api/product/type/DIGITAL_GOOD')
-                .then(response => (this.itemData = response))
+            ProductService.getProductList()
+                .then(response => (this.itemData = response.data));
         }
     };
 </script>

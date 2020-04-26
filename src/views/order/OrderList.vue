@@ -22,7 +22,7 @@
     import { SfTable } from "@storefront-ui/vue";
     import axios from "axios";
     export default {
-        name: "Orders",
+        name: "OrderList",
         components: {
             SfTable
         },
