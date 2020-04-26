@@ -11,6 +11,17 @@ class UserService {
     getProtectedContent() {
         return axios.get(API_URL + 'user', { headers: authHeader() });
     }
+
+    getUserLogin(user) {
+        return axios.get("/api/generic/v1/entities/UserLogin?userLoginId=" + user.userLoginId, { headers: authHeader() })
+            .then(response => {
+                if (response.data.length > 0) {
+                    localStorage.setItem('userlogin', JSON.stringify(response.data[0]));
+                }
+
+                return response.data;
+            });
+    }
 }
 
 export default new UserService();
