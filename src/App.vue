@@ -1,10 +1,18 @@
 <template>
     <div id="app">
+        <div v-if="this.$store.state.auth.status.loggedIn">
         <header>
             <HeaderComponent/>
         </header>
+        </div>
+        
         <div class="container">
-            <Sidebar/>
+            <div v-if="this.$store.state.auth.status.loggedIn">
+                <Sidebar/>
+            </div>
+            <div v-else>
+                <span style="visibility: hidden">{{this.$router.push('/login')}}</span>
+            </div>
             <router-view></router-view>
         </div>
     </div>
