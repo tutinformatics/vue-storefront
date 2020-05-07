@@ -43,6 +43,7 @@
 </script>
 
 <style>
+  
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -51,10 +52,16 @@
         color: #2c3e50;
         margin-top: 10px;
     }
-    .sf-button {
+    .create {
         --button-background: #03c2fc;
         border-radius: 10px;
         margin-left: -200px;
+    }
+    .order {
+        --button-background: #03c2fc;
+        border-radius: 10px;
+        margin-left: -300px;
+        margin-bottom: 25px;
     }
 
     .sf-search-bar {
@@ -84,10 +91,11 @@
     .sf-product-card {
         margin-left: 50px;
         --product-card-min-width: 40px;
+        margin-top: 20px;
     }
 
     .sf-heading__title {
-        margin-top: -30px;
+        margin-top: -50px;
         font-size: 50px;
     }
 
@@ -106,7 +114,9 @@
     }
 
     .sf-product-card__title {
-        font-size: 25px;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
 
     .sf-table__header {
@@ -133,6 +143,23 @@
 
     .sf-breadcrumbs {
         margin-left: 100px;
+    }
+    .jumbotron {
+        margin-left: 150px;
+    }
+
+    .token {
+        margin-left: -325px;
+    }
+    .details {
+        margin-left: -575px;
+    }
+
+    .id {
+        margin-left: -705px;
+    }
+    .welcome {
+        margin-left: -285px;
     }
 
 </style>

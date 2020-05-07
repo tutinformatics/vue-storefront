@@ -1,5 +1,5 @@
 <template>
-        <SfButton :disabled="disabled">
+        <SfButton :disabled="disabled" class="create">
             Create
         </SfButton>
 </template>

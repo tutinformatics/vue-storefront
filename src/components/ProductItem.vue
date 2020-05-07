@@ -19,7 +19,7 @@
       @click:reviews="alert('@click:reviews')"
     />
     <div class="float-right">
-      <SfButton v-on:click="addOrder()">Order</SfButton>
+      <SfButton v-on:click="addOrder()" class="order">Order</SfButton>
     </div>
   </section>
 </template>

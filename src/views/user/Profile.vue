@@ -5,11 +5,13 @@
                 <strong>{{currentUser.userLoginId}}</strong> Profile
             </h3>
         </header>
-        <p>
+        <h1 class="welcome">Hello {{currentUser.userLoginId}}, welcome back!</h1>
+        <p class="details"><b>Here are your login details</b></p>
+        <p class="token">
             <strong>Token:</strong>
             {{currentUser.token.substring(0, 20)}} ... {{currentUser.token.substr(currentUser.token.length - 20)}}
         </p>
-        <p>
+        <p class="id">
             <strong>Id:</strong>
             {{currentUser.userLoginId}}
         </p>
