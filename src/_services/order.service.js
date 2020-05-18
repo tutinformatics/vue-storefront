@@ -3,7 +3,6 @@ import authHeader from './auth-header';
 import UserService from './user.service';
 
 const API_URL = '/api/generic/v1/';
-const USER = JSON.parse(localStorage.getItem('user')).userLoginId
 
 class OrderService {
 
@@ -12,7 +11,7 @@ class OrderService {
     }
 
     getOrderList() {
-        return axios.get(API_URL + 'entities/OrderHeader?createdBy=' + USER, { headers: authHeader() })
+        return axios.get(API_URL + 'entities/OrderHeader?createdBy=' + JSON.parse(localStorage.getItem('user')).userLoginId, { headers: authHeader() })
     }
 
     getOrderHeader(id) {
@@ -25,7 +24,7 @@ class OrderService {
 
     createOrder(name) {
         return axios.post(API_URL + 'services/createOrderHeader', {
-            createdBy: USER,
+            createdBy: JSON.parse(localStorage.getItem('user')).userLoginId,
             orderName: name,
             userLogin: UserService.getUserLogin()
         }, {headers: authHeader()})
