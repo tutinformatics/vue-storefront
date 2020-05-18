@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import axios from "axios";
+    import OrderService from "../../_services/order.service";
     import { SfSection, SfButton } from "@storefront-ui/vue";
 
     export default {
@@ -28,9 +28,8 @@
             }
         },
         mounted() {
-            axios
-                .get('/api/order/id/' + this.$route.params.id)
-                .then(response => (this.order = (response["data"])))
+            OrderService.getOrderHeader(this.$route.params.id)
+                .then(response => (this.order = response.data[0]));
         }
     }
 </script>

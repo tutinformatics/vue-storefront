@@ -18,14 +18,14 @@
       @click:wishlist="alert('@click:wishlist')"
       @click:reviews="alert('@click:reviews')"
     />
-    <div class="float-right">
+    <div >
       <SfButton v-on:click="addOrder()" class="order">Order</SfButton>
     </div>
   </section>
 </template>
 <script>
 import { SfProductCard, SfButton } from "@storefront-ui/vue";
-import axios from "axios";
+import OrderService from "../_services/order.service";
 
 export default {
   name: "ProductItem",
@@ -56,16 +56,9 @@ export default {
     };
   },
   methods: {
+
     addOrder() {
-      axios({
-        method: 'post',
-        url: '/api/order/DEMO_CUSTOMER',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
-        },
-        data: {orderName: this.item.productName}
-      })
+      OrderService.createOrder(this.item.productName);
     }
   }
 };

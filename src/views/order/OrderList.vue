@@ -20,7 +20,7 @@
 
 <script>
     import { SfTable } from "@storefront-ui/vue";
-    import axios from "axios";
+    import OrderService from "../../_services/order.service";
     export default {
         name: "OrderList",
         components: {
@@ -34,13 +34,13 @@
                     "Creation Date",
                     "Priority"
                 ],
-                tableRows: []
+                tableRows: [],
+                itemData: {}
             }
         },
         mounted() {
-            axios
-                .get('/api/order/DEMO_CUSTOMER')
-                .then(response => (this.updateData(response["data"])))
+            OrderService.getOrderList()
+                .then(response => (this.updateData(response.data)));
         },
         methods: {
             updateData(jsonRows) {
